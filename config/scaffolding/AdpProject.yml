@@ -8,60 +8,235 @@ packages:
   gitUsername: Sephali-Smrutisikha-IBM-1
   gitBranch: main
 - name: WmJDBCAdapter
+  version: 10.3.0.0.34
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
+- name: WmIBMPowerAdapter
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
+- serviceName: project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections:cc
+  packages:
+  - name: AdpProject
+    version: "1.0"
+  - name: WmIBMPowerAdapter
+    version: 10.11.0.0.77
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1
   packages:
   - name: AdpProject
     version: "1.0"
+  - name: WmIBMPowerAdapter
+    version: 10.11.0.0.77
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_2
+  packages:
+  - name: AdpProject
+    version: "1.0"
+  - name: WmIBMPowerAdapter
+    version: 10.11.0.0.77
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_3
+  packages:
+  - name: AdpProject
+    version: "1.0"
+  - name: WmIBMPowerAdapter
+    version: 10.11.0.0.77
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
 configurationVariables:
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
-  : "10"
   ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.driverType
   : Progress® DataDirect®
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
-  : "1521"
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
-  : loginTimeout=60;
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
-  : edwd
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
-  : "1000"
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
-  : ""
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
-  : ""
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.transactionType
-  : LOCAL_TRANSACTION
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionManagerSettings.maximumPoolSize
+  : "10"
   ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolable
   : "false"
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
-  : "0"
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
-  : "{AES}aLZqGGNedYRdf0xY47LtDQ=="
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
-  : ORACLE
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
-  : "0"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.serverName
+  : dc
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.keyStore
+  : ""
+  artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionEnabled: "false"
   ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
   : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.user
+  : edw
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.useDefaultUser
+  : "false"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.networkProtocol
+  : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.serverName
+  : ewdew
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.keyStore
+  : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.otherProperties
+  : loginTimeout=60;
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.user
+  : deec
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.password
+  : "{AES}aLZqGGNedYRdf0xY47LtDQ=="
+  artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionEnabled: "false"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.portNumber
+  : "1521"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.isSecureConnection
+  : "false"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionManagerSettings.startupRetryCount
+  : "0"
   ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
   : "1"
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.serviceType
+  : COMMAND
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.password
+  : "{AES}XzaFynaZMI4L1ojQOH4uRhU4n40dkx7qspXBLn/Pq+4="
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.keyStore
+  : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.password
+  : "{AES}aLZqGGNedYRdf0xY47LtDQ=="
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.oracle.OracleDataSource
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
+  : "1521"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
+  : edwd
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.useProxyServer
+  : "false"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
+  : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.trustStore
+  : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.oracle.OracleDataSource
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
+  : "{AES}aLZqGGNedYRdf0xY47LtDQ=="
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.userId
+  : GSAR
+  artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionEnabled: "false"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.proxyEndpoint
+  : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.otherProperties
+  : loginTimeout=60;
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.expireTimeout
+  : "1000"
   ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
   : "10"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.driverType
+  : Progress® DataDirect®
   ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
   : com.wm.dd.jdbcx.oracle.OracleDataSource
   ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
   : "1"
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.keyStore
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.proxyEncryptionMode
+  : CLIENT_TO_SERVER
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
+  : loginTimeout=60;
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
   : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.transactionType
+  : LOCAL_TRANSACTION
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.otherProperties
+  : ""
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.currentLibrary
+  : GSAR231
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.socketProperties
+  : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.databaseName
+  : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.databaseName
+  : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.trustStore
+  : ""
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
+  : ORACLE
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.dbType
+  : ORACLE
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.dbType
+  : ORACLE
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionSettings.portNumber
+  : "1521"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_3.connectionManagerSettings.heartBeatInterval
+  : "0"
   artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled: "false"
   ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
   : ewdwe
-  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.blockingTimeout
-  : "1000"
+  ? artConnection.AdpProject.project.adp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_2.connectionSettings.networkProtocol
+  : ""
+  ? artConnection.AdpProject.project.adp.WmIBMPowerAdapter.com_wm_adapter_ibmp_WmIBMPowerAdapter.connections.cc.connectionSettings.systemName
+  : PUB400.COM
